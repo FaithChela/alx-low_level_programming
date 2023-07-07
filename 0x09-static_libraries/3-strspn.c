@@ -10,22 +10,22 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, f, a;
+	int a, j, f, flag;
 
 	f = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		a = 0;
+		flag = 0;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (s[i] == accept[j])
+			if (s[a] == accept[j])
 			{
 				f++;
-				a = 1;
+				flag = 1;
 			}
 		}
-		if (a == 0)
+		if (flag == 0)
 		{
 			return (f);
 		}
