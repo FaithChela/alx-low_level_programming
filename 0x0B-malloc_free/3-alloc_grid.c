@@ -39,7 +39,7 @@ int **alloc_grid(int width, int height)
 	for (a = 0; a < height; a++)
 	{
 		for (c = 0; c < width; c++)
-			mee[a][c] = 0;
+			arr[a][c] = 0;
 	}
 
 	return (arr);
